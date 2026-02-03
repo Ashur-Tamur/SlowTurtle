@@ -87,7 +87,7 @@
 
             if (searchEngineCBox.SelectedItem is not SearchEngineComboBoxItem selectedSearchEngine)
             {
-                MessageBox.Show("No search engine selected.");
+                MessageBox.Show("No search engine selected. Please select one!");
                 return;
             }
 
