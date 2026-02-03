@@ -1,6 +1,6 @@
-# 🐢 SpeedyTurtle
+# 🐢 SlowTurtle
 
-**SpeedyTurtle** is an **experimental / meme web browser** built in **C# using Windows Forms**, powered by **Microsoft WebView2 (Chromium)**.
+**SlowTurtle** is an **experimental / meme web browser** built in **C# using Windows Forms**, powered by **Microsoft WebView2 (Chromium)**.
 
 > ⚠️ **This is NOT a browser for daily use.**
 > This project exists for learning, experimentation, and because I was bored.
@@ -74,7 +74,7 @@ Includes real engines **and meme engines**:
 
 ## Configuration System
 
-SpeedyTurtle uses a **very simple JSON-based configuration system**.
+SlowTurtle uses a **very simple JSON-based configuration system**.
 This is **NOT a real API** — it’s just a lightweight config loader/saver.
 
 Understanding how it works is important if you want to edit things manually.
@@ -86,7 +86,7 @@ Understanding how it works is important if you want to edit things manually.
 ### Windows
 
 ```
-%LOCALAPPDATA%/SpeedyTurtle/config.json
+%LOCALAPPDATA%/SlowTurtle/config.json
 ```
 
 ---
@@ -155,7 +155,7 @@ Calling this an **API is generous**.
 What it actually is:
 
 * A **JSON schema implicitly defined by code**
-* Parsed manually by `SpeedyTurtleConfigManager.cs`
+* Parsed manually by `SlowTurtleConfigManager.cs`
 * No validation layer
 * No versioning
 * No guarantees
@@ -199,11 +199,11 @@ This is a **deliberately simple and fragile system**, suitable only for learning
 
 1. Clone the repo
 ```bash
-$ git clone https://github.com/DCA254/SpeedyTurtle.git
+$ git clone https://github.com/DCA254/SlowTurtle.git
 ```
 2. Enter the source directory
 ```bash
-$ cd SpeedyTurtle/src
+$ cd SlowTurtle/src
 ```
 
 ### Build
@@ -223,15 +223,15 @@ $ dotnet run
 ## Project Structure (simplified)
 
 ```
-SpeedyTurtle/src/
+SlowTurtle/src/
 ├─ Assets/                  # Icons, images and visual assets
 ├─ Browser.cs               # Main browser logic
 ├─ PageLinkHandler.cs       # Navigation, validation and link handling
 ├─ SearchEngine.cs          # Search engine system
-├─ SpeedyTurtleConfigManager.cs
+├─ SlowTurtleConfigManager.cs
 ├─ MoreInformationPage.cs   # Settings page
 ├─ Program.cs               # Entry point
-└─ SpeedyTurtle.csproj
+└─ SlowTurtle.csproj
 ```
 
 ---
