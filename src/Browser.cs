@@ -141,26 +141,10 @@ namespace SpeedyTurtle
         {
             string addressText = addressBar.Text;
 
-            if (Browser.Config!.highlightLink)
-            {
-                addressBar.ForeColor = PageLinkHandler.VerifyLink(addressText) ? ColorHelper.FromString(Config!.validLinkHighlightColor) : ColorHelper.FromString(Config!.invalidLinkHighlightColor);
-            }
-
             if (e.KeyCode == Keys.Enter)
             {
                 e.SuppressKeyPress = true;
-                addressBar.ForeColor = Color.FromArgb(199, 199, 199);  // default color.
-
-                if (PageLinkHandler.isPorn(addressText.ToLower()))
-                {
-                    Engine = new SearchEngine(SearchEngine.SearchEngineKind.Baidu);
-                    MessageBox.Show(@"please do not search porn on your browser.
-Because of that we have decided that you need to search using Baidu instead of " + Browser.Config!.searchEngine
-);
-                    return;
-                }
-
-                // not a valid url, then we search.
+                addressBar.ForeColor = Color.FromArgb(199, 199, 199);
                 if (!LinkHandler.LoadPage(this.webViewer, this.addressBar, addressText))
                 {
                     LinkHandler.LoadPage(this.webViewer, this.addressBar, Engine!.Search(addressText));
